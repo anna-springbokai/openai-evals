@@ -1,6 +1,9 @@
 primary_outcome_reporting:
   id: primary_outcome_reporting.dev.v0
-  description: "Outcomes (endpoints) are variables monitored during clinical trials to assess the impact
+  description: "This evaluation provides a few examples of abstracts with correct and incorrect reporting of primary outcomes
+                and assesses the performance of GPT models on the task of detecting incorrect/incomplete reporting of outcomes. 
+  
+                Outcomes (endpoints) are variables monitored during clinical trials to assess the impact
                 of the intervention studied on the health of study subjects.
                 Significance level is calculated for each outcome to assess whether the intervention is beneficial. 
                 Outcomes are often misreported in scientific articles,
@@ -10,8 +13,22 @@ primary_outcome_reporting:
                 Misreporting of trial outcomes has harmful effects as it can create misleading impression
                 about the effectiveness or safety of the intervention.
                 Correct reporting is particularly important for primary outcomes - main variables assessed in a clinical trial.
-                This evaluation provides a few examples of abstracts with correct and incorrect reporting of primary outcomes
-                and assesses the performance of GPT models on the task of detecting incorrect/incomplete reporting of outcomes. 
+                Misreporting of the primary outcome(s) can occur in several forms:
+                - not defining the primary outcome;
+                - not reporting the results for the primary outcome;
+                - incomplete reporting of the primary outcome 
+                (reporting results for some but not all primary outcomes;
+                 not reporting numerical results for the primary outcome; 
+                 reporting results for some but not all time points for the primary outcome;
+                 reporting some numerical results but no significance level).
+
+                They key question in the evaluation is:
+                'Are numerical results (including significance levels) for all primary outcomes reported in the results section of the abstract?'
+                The answers expected in this evaluation are:
+                - Yes (all outcomes reported with significance levels)
+                - No (no numerical data reported for at least one outcome)
+                - Partially (numerical results for at least one outcomes are reported without significance level)
+                - N/A (the primary outcome is not defined). End your answer with \"END\"
 
                 A few relevant references for outcome extraction:
 
