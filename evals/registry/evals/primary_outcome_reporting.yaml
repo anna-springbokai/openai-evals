@@ -1,0 +1,28 @@
+primary_outcome_reporting:
+  id: primary_outcome_reporting.dev.v0
+  description: "Outcomes (endpoints) are variables monitored during clinical trials to assess the impact
+                of the intervention studied on the health of study subjects.
+                Significance level is calculated for each outcome to assess whether the intervention is beneficial. 
+                Outcomes are often misreported in scientific articles,
+                e.g. non-significant outcomes are omitted,
+                new outcomes (the ones that were not pre-defined) are added if they are significant,
+                outcomes are claimed to improve but numerical results and significance levels are not presented.
+                Misreporting of trial outcomes has harmful effects as it can create misleading impression
+                about the effectiveness or safety of the intervention.
+                Correct reporting is particularly important for primary outcomes  - main variables assessed in a clinical trial.
+                This evaluation provides a few examples of abstracts with correcy and incorrect reporting of primary outcomes
+                and assesses the performance of GPT models on the task of detecting incorrect/imcomplete reporting of outcomes. 
+
+                A few relevant references for outcome extraction:
+
+                - I. Boutron, S. Dutton, P. Ravaud, and D. Altman. Reporting and interpretation of randomized controlled trials with statistically nonsignificant results for primary outcomes. JAMA, 2010.
+                - I. Boutron, D. Altman, S. Hopewell, F. Vera-Badillo, I. Tannock, and P. Ravaud. Impact of spin in the abstracts of articles reporting results of randomized controlled trials in the field of cancer: the SPIIN randomized controlled trial. Journal of Clinical Oncology, 2014.
+                - B. Goldacre, H. Drysdale, A. Powell-Smith, A. Dale, I. Milosevic, E. Slade, P. Hartley, C. Marston, K. Mahtani, and C. Heneghan. The compare trials project. 2016. URL www.COMPare-trials.org.
+                - A. Koroleva, S. Kamath, P. Bossuyt, P. Paroubek. 2020. DeSpin: a prototype system for detecting spin in biomedical publications. In Proceedings of the 19th SIGBioMed Workshop on Biomedical Language Processing, pages 49–59, Online. Association for Computational Linguistics.
+                "
+  metrics: [accuracy]
+
+primary_outcome_reporting.dev.v0:
+  class: evals.elsuite.basic.includes:Includes
+  args:
+    samples_jsonl: primary_outcome_reporting/samples.jsonl
