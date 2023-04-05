@@ -9,9 +9,9 @@ primary_outcome_reporting:
                 outcomes are claimed to improve but numerical results and significance levels are not presented.
                 Misreporting of trial outcomes has harmful effects as it can create misleading impression
                 about the effectiveness or safety of the intervention.
-                Correct reporting is particularly important for primary outcomes  - main variables assessed in a clinical trial.
-                This evaluation provides a few examples of abstracts with correcy and incorrect reporting of primary outcomes
-                and assesses the performance of GPT models on the task of detecting incorrect/imcomplete reporting of outcomes. 
+                Correct reporting is particularly important for primary outcomes - main variables assessed in a clinical trial.
+                This evaluation provides a few examples of abstracts with correct and incorrect reporting of primary outcomes
+                and assesses the performance of GPT models on the task of detecting incorrect/incomplete reporting of outcomes. 
 
                 A few relevant references for outcome extraction:
 
