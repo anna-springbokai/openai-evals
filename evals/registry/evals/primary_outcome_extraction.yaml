@@ -1,0 +1,26 @@
+primary_outcome_extraction:
+  id: primary_outcome_extraction.dev.v0
+  description:  "Outcomes (endpoints) are variables monitored during clinical trials to assess the impact
+                of the intervention studied on the health of study subjects. Automatic extraction of trial outcomes
+                is a common task in Biomedical NLP. Automatic extraction of trial outcomes
+                is essential for automating systematic review process, enabling medical question answering,
+                and for checking the completeness and coherence of reporting to avoid bias and spin.
+                This evaluation provides a few examples of primary outcomes (main variable in clinical trials)
+                and assesses the performance of GPT models on the primary outcome extraction task.
+
+                A few relevant references for outcome extraction:
+  
+                - A. Lucic and C. Blake. Improving endpoint detection to support automated systematic reviews. In AMIA Annu Symp Proc., 2016.
+                - B. D. Bruijn, S. Carini, S. Kiritchenko, J. Martin, and I. Sim. Automated information extraction of key trial design elements from clinical trial publications. In Proceedings of the AMIA Annual Symposium, 2008.
+                - C. Blake and A. Lucic. Automatic endpoint detection to support the systematic review process. J. Biomed. Inform, 2015.
+                - D. Demner-Fushman, B. Few, S. Hauser, and G. Thoma. Automatically identifying health outcome information in medline records. Journal of the American Medical Informatics Association, 2006
+                - D. Jin and P. Szolovits. PICO element detection in medical text via long short-term memory neural networks. In Proceedings of the BioNLP 2018 workshop, pages 67–75, Melbourne, Australia, July 2018. Association for Computational Linguistics. URL https: //www.aclweb.org/anthology/W18-2308.
+                - R. Summerscales, S. Argamon, J. Hupert, and A. Schwartz. Identifying treatments, groups, and outcomes in medical abstracts. In Proceedings of the Sixth Midwest Computational Linguistics Colloquium (MCLC), 2009
+                "
+
+  metrics: [accuracy]
+
+primary_outcome_extraction.dev.v0:
+  class: evals.elsuite.basic.fuzzy_match:FuzzyMatch
+  args:
+    samples_jsonl: primary_outcome_extraction/samples.jsonl
